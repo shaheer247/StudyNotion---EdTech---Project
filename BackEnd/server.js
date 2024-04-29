@@ -21,7 +21,12 @@ db.connect();
 //middlewares
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors())
+app.use(cors(
+    {
+       origin: "study-notion-ed-tech-project-backend-shaheer247.vercel.app",
+		credentials: true,
+    }
+))
 
 app.use(
     fileUpload({
