@@ -99,7 +99,7 @@ export function login(email, password, navigate) {
       localStorage.setItem("user", JSON.stringify(response.data.user))
       navigate("/dashboard/my-profile")
     } catch (err) {
-      toast.error(err.response.data.message)
+      toast.error("Login Failed")
     }
     dispatch(setLoading(false))
     toast.dismiss(toastId)
